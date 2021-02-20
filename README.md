@@ -1,6 +1,6 @@
 # Práctica final: Portfolio 🚀
 
-Trabajo final del Curso de Programación Women4IT
+**Trabajo final del Curso de Programación Women4IT**
 
 En este trabajo muestro en una "One Page" con los siguientes apartados:
 * [Inicio]
