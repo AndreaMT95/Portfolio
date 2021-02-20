@@ -12,7 +12,7 @@ Para mostar los apartados hay un menú interactivo para poder moverse libremente
 Descripción de los apartados:
 * [Inicio] - Portada de la página
 * [Trabajos] - Muestro los 3 proyectos principales hechos durante el curso (mediante enlaces a los mismos)
-* [About] - En este apartado cuento un poco acerca de mí 
+* [About] - En este apartado cuento un poco sobre mí 
 
 La página también cuenta con un footer con enlaces a mis redes sociales.
 
