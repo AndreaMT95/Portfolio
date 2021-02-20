@@ -1,0 +1,488 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+  }
+  
+  a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+  }
+  p a {
+	display: inline;
+  }
+  
+  h1, h2, h3, h4, h5, h6 , strong{
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+  }
+  
+  form, input, textarea, label, button, fieldset {
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+	display: block;
+	background: transparent;
+  }
+  
+  img{
+	width: 100%;
+	display: block;
+	object-fit: cover;
+  }
+
+  
+  html{
+	scroll-behavior: smooth;
+  }
+  
+  body {
+	font-size: 100%;
+	color: black;
+	
+  }
+
+.header{
+	width: 100%;
+	padding: .8em 2em;
+	background-color: white;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	animation: aparecer 2s ease 1 both;
+	
+}
+.header .h1 .logo{
+	width: 100%;
+	max-width: 180px;
+	
+}
+.header .nav{
+	width: calc( 50% - 150px );
+	
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: initial;
+	
+}
+.header .menu{
+	display: none;
+	position: absolute;
+    margin-top: 140px;
+    right: 0;
+    text-align: justify;
+    text-align: right;
+    font-size: 22px;
+    color: cadetblue;
+	margin-right: 60px;
+}
+.header .menu .ul{
+	background-color: white;
+    width: 100px;
+    height: 120px;
+    border-radius: 5px;
+}
+.header .menu .ul .li{
+	padding: 6px;
+}
+
+.header .nav .ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+  .header .fa-bars{
+	  display: none;
+  }
+.header .nav .ul .li{
+	margin: 0 1em;
+}
+
+.header .nav .li .a{
+	color: white;
+	font-size: 1em;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	background-color: cadetblue;
+	padding: .35em;
+	font-family: 'EB Garamond', serif;
+	border-radius: 10%;
+}
+.header .nav .li .a:hover{
+	color: cadetblue;
+	background: black;
+}
+
+.section{
+	width: 100%;
+	min-height: 100vh;
+	padding: 20vh 5vh;
+	
+}
+
+.section .inicio{
+	background: url(../Assets/img/noria\ color.jpg) no-repeat center center/ cover;
+	width: 100%;
+	min-height: 120vh;
+	padding: 20vh 5vh;
+	
+}
+.section .texto{
+	width: 40%;
+	min-width: 300px;
+	min-height: 10vh;
+	padding: 3vh 2vh;
+	margin-left: 10px;
+	
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: center;
+
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	background-color: cadetblue;
+}
+.section .inicio .texto .h2{
+	color: white;
+	font-size: 1.6em;
+	font-weight: 500;
+	padding-bottom: 20px;
+}
+.section .inicio .texto .p{
+	color: rgba(27, 25, 25, 0.74);
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.section .trabajos{
+	width: 100%;
+	min-height: 50vh;
+	padding: 5vh 5vh;
+	text-align: -webkit-center;
+	
+	
+}
+.section .trabajos .h2{
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	background-color: cadetblue;
+	font-size: 2.5em;
+	font-family: 'EB Garamond', serif;
+	color: white;
+	width: 300px;
+	margin: auto;
+	border-radius: 10%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	
+}
+.section .trabajos .p{
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: 1.2em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 80%;
+	margin: auto;
+	font-weight: 500;
+	margin-top: 50px;
+}
+.section .trabajos .grid{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1em;
+	margin: 1em 0 0;
+}
+.section .trabajos .article{
+	background: white;
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.section .trabajos .article .overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:  rgba(7, 133, 138, 0.356);
+	top:0;
+	left: 0;
+	backdrop-filter: blur(10px);
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+	transition: all, 5s, ease;
+	opacity: 0;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	margin: auto;
+	font-weight: 600;
+	
+}
+.section .trabajos .article:hover .overlay{
+	opacity: 1;
+}
+
+.section .about{
+	background: url(../Assets/img/) no-repeat center center;
+	width: 100%;
+	min-height: 100vh;
+	padding: 1vh .5vh;
+	margin: .1em 0;
+}
+
+.section .about .extracto .h2{
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	background-color: cadetblue;
+	font-size: 2.5em;
+	font-family: 'EB Garamond', serif;
+	color: white;
+	width: 300px;
+	margin: auto;
+	border-radius: 10%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+
+}
+.section .about .extracto .sobremi{
+	font-size: 1em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 90%;
+	margin: auto;
+	font-weight: 600;
+	text-align: justify;
+}
+
+.section .about .extracto .p{
+	letter-spacing: 1.5px;
+	font-size: 1.1em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 100%;
+	margin: auto;
+	font-weight: 500;
+	margin-top: 20px;
+	text-align: justify
+}
+.section .about .skills{
+	font-size: 1.2em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 90%;
+	margin: auto;
+	font-weight: 400;
+}
+.section .about .skills .h3{
+	letter-spacing: 1.5px;
+	font-size: 1em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 100%;
+	margin: auto;
+	font-weight: 500;
+	margin-top: 40px;
+	text-align: justify
+}
+.section .about .skills .ul{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	text-align: justify;
+
+	width: 50%;
+	margin-left: 50px;
+	margin: .5em 2em;
+}
+.section .about .skills .li{
+	margin: .5em;
+	color: rgb(122, 193, 196);
+	padding: .15em;
+}
+.section .about .skills .li:hover{
+	color: cadetblue;
+	background: black;
+}
+.section .about .estudios{
+	font-size: 1.2em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 90%;
+	margin: auto;
+	font-weight: 400;
+}
+.section .about .estudios .h3{
+	letter-spacing: 1.5px;
+	font-size: 1em;
+	font-family: 'EB Garamond', serif;
+	color: black;
+	width: 100%;
+	margin: auto;
+	font-weight: 500;
+	margin-top: 20px;
+
+}
+.section .about .estudios .ul{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-content: center;
+
+	width: 50%;
+	margin-left: 50px;
+	margin: 1em 2em;
+}
+.section .about .estudios .ul .li{
+	margin: .5em;
+	color: rgb(122, 193, 196);
+	padding: .15em;
+}
+.section .about .estudios .ul .li:hover{
+	color: cadetblue;
+	background: black;
+}
+
+.section .about .img{
+	margin: auto;
+	width: 20em;
+	height: 20em;
+}
+.footer{
+	width: 100%;
+	min-height: 10vh;
+	background-color:cadetblue;
+	color: white;
+	padding: 1.5vw;
+	margin: auto;
+}
+.footer .h2{
+	text-transform: uppercase;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
+	letter-spacing: 2px;
+	font-size: 1.6em;
+	font-family: 'EB Garamond', serif;
+	word-spacing: 15px;
+	color:#ffffff;
+	font-weight: 500;
+}
+.footer .ul{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: initial;
+}
+.footer .ul .li{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: initial;
+	
+	margin: 0.3em 1em;
+	color: #ffffff;
+	transition: all .5s ease;
+}
+@media screen and (min-width:961px){
+	.header .menu {
+		display: none;
+	}
+}
+@media screen and (max-width:960px){
+	.header .fa-bars{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-content: center;
+		align-items: center;
+
+		margin-right: 1.5em;
+	}
+
+	.header .nav {
+		display: none;
+	}
+	.section .trabajos .grid {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+}
+
+@media screen and (max-width:480px){
+	
+	.header .fa-bars{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-content: center;
+		align-items: center;
+
+		margin-right: 1.5em;
+	}
+
+	.header .nav {
+		display: none;
+	}
+	.section .trabajos .grid {
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	.section .trabajos .h2{
+		width: 110%;
+	}
+	.footer .h2{
+		font-size: 1.2em;
+		word-spacing: 10px;
+	}
+}
+
